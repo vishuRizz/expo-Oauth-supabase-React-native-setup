@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "real-estate",
+    "slug": "real-estate",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-font",
+        {
+         "fonts": [
+           "./assets/fonts/Rubic-Bold.ttf",
+           "./assets/fonts/Rubic-ExtraBold.ttf",
+           "./assets/fonts/Rubic-Medium.ttf",
+           "./assets/fonts/Rubic-Light.ttf",
+           "./assets/fonts/Rubic-Regular.ttf",
+           "./assets/fonts/Rubic-SemiBold.ttf"
+           ]
+        }
+      ]
+    ],
+    
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
