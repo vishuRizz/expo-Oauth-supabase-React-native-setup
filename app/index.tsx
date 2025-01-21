@@ -10,11 +10,10 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-     <Text className="text-3xl font-bold">Real Estate App</Text>
-     <Link href="/sign-in">Sign-in</Link>
-     <Link href="/explore">Explore</Link>
+     <Text className="text-3xl font-rubik font-bold mb-20">Welcome</Text>
+     <Link href="/signup">Sign up</Link>
      <Link href="/profile">profile</Link>
-     <Link href="/properties/2">Property</Link>
+
     </View>
   );
 }

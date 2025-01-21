@@ -1,5 +1,90 @@
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# React Native
+android/
+ios/
+*.iml
+*.hprof
+.DS_Store
+node_modules/
+*.lock
+!android/app/src/main/assets/index.android.bundle
+!android/app/src/main/assets/index.android.bundle.map
+
+# Exclude generated data
+.expo/
+.expo-shared/
+
+# Metro bundler
+.bundle
+.packager
+*.lock
+
+# Miscellaneous
+*.swp
+*.swo
+*.tmp
+*.temp
+*.orig
+*.rej
+
+# Editor specific
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+.vimrc
+
+# Build files
+build/
+dist/
+
+# Tailwind CSS
+tailwind.config.js
+postcss.config.js
+
+# Supabase
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+
+# CocoaPods
+ios/Pods/
+
+# Android/Gradle
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/build/
+android/app/proguard-rules.pro
+
+# Test files
+*.test.js
+*.spec.js
+coverage/
+*.coverage
+
+# Generated maps
+*.map
+
+# By OS
+*.DS_Store
+Thumbs.db
+
+# IDEs
+*.iml
+.idea/
+
+
 # dependencies
 node_modules/
 
