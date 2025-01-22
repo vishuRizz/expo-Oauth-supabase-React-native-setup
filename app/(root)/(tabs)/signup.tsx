@@ -47,21 +47,33 @@ const Signup = () => {
 
   const handleGoogleSignup = async () => {
     try {
+      setLoading(true);
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
+        options: {
+          redirectTo: 'https://wupahhhetxyijbknikff.supabase.co/auth/v1/callback', // Match with your Supabase redirect URL
+          queryParams: {
+            access_type: 'offline', // Request offline access
+            prompt: 'consent', // Force re-consent
+          },
+        },
       });
-
+  
       if (error) {
         console.log('Google Signup Error:', error);
-        Alert.alert('Google Signup Error', error.message || 'An error occurred.');
+        Alert.alert('Google Signup Error', error.message || 'An error occurred during Google signup.');
       } else {
+        Alert.alert('Success', 'Google signup successful!');
         router.push('/Home');
       }
     } catch (error) {
       console.log('Unexpected Error:', error);
-      Alert.alert('Unexpected Error', 'Something went wrong. Please try again later.');
+      Alert.alert('Error', 'An unexpected error occurred.');
+    } finally {
+      setLoading(false);
     }
   };
+  
 
   return (
     <View className="flex-1 justify-center bg-gray-100 p-6">
